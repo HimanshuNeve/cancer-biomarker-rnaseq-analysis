@@ -19,6 +19,9 @@ build/
 
 # ── Large raw data ───────────────────
 data/raw_data/
+data/processed/*.csv
+results/deseq2/*.csv
+results/enrichment/*.csv
 
 # ── Jupyter ─────────────────────────
 .ipynb_checkpoints/
