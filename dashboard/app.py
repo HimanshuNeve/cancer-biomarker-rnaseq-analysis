@@ -71,9 +71,10 @@ st.divider()
 # Tabs
 # ============================================================
 
-tab1, tab2, tab3 = st.tabs([
+tab1, tab2, tab3, tab4 = st.tabs([
     '🔬 Prediction',
     '📊 Biomarker Importance',
+    '🧠 Explainable AI',
     'ℹ️ Project Info'
 ])
 
@@ -302,12 +303,45 @@ with tab2:
             'Biomarker importance file not found. '
             'Please run the ML pipeline first.'
         )
-
-# ============================================================
-# TAB 3 — Project Information
-# ============================================================
-
+# ── Tab 3: Explainable AI ──
 with tab3:
+
+    st.header("Explainable AI using SHAP")
+
+    st.markdown("""
+    SHAP (SHapley Additive exPlanations) identifies
+    how individual genes contribute to tumor prediction.
+    """)
+
+    shap_summary = os.path.join(
+        BASE_DIR,
+        '..',
+        'plots',
+        'shap',
+        'shap_summary.png'
+    )
+
+    shap_bar = os.path.join(
+        BASE_DIR,
+        '..',
+        'plots',
+        'shap',
+        'shap_bar.png'
+    )
+
+    if os.path.exists(shap_summary):
+        st.subheader("SHAP Summary Plot")
+        st.image(shap_summary)
+
+    if os.path.exists(shap_bar):
+        st.subheader("Global Biomarker Contributions")
+        st.image(shap_bar)
+
+# ============================================================
+# TAB 4 — Project Information
+# ============================================================
+
+with tab4:
 
     st.header('About This Project')
 
@@ -322,6 +356,7 @@ with tab3:
     | **ML Models** | Logistic Regression, Random Forest, SVM |
     | **Best Model** | Random Forest |
     | **Best ROC-AUC** | 1.000 |
+    | **Explainable AI** | SHAP (SHapley Additive exPlanations) |
     ''')
 
     st.markdown('---')
