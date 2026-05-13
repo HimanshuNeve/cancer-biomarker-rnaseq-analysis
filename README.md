@@ -43,25 +43,48 @@ Starting from raw count data, the pipeline goes through:
 ## Folder structure
 
 ```
-cancer-biomarker-rnaseq/
+cancer-biomarker-rnaseq-analysis/
+│
 ├── data/
-│   ├── metadata/            sample group labels
-│   └── processed/           normalized CSVs used in analysis
-├── scripts/
-│   ├── r_scripts/           01 to 05 — bioinformatics side
-│   └── python_scripts/      06 to 09 — machine learning side
-├── results/
-│   ├── deseq2/              DEG tables
-│   ├── enrichment/          GO and KEGG outputs
-│   └── ml_models/           saved models and evaluation results
-├── plots/
-│   ├── deseq2_plots/        volcano, heatmap, PCA
-│   └── ml_plots/            ROC curves, confusion matrix, feature importance
+│   └── metadata/
+│       └── sample_metadata.csv
+│
 ├── dashboard/
-│   └── app.py               Streamlit app
-├── docs/
-│   └── session_info.txt     R package versions
+│   └── app.py                         # Streamlit deployment dashboard
+│
+├── notebooks/
+│   └── Section11_ML_Pipeline.ipynb   # Complete ML workflow notebook
+│
+├── plots/
+│   ├── ml_plots/
+│   │   ├── ROC_curves.png
+│   │   ├── confusion_matrices.png
+│   │   └── feature_importance.png
+│   │
+│   └── workflow/
+│       ├── workflow_overview.png
+│       └── pipeline_architecture.png
+│
+├── results/
+│   └── ml_models/
+│       ├── random_forest.pkl
+│       ├── scaler.pkl
+│       ├── feature_names.pkl
+│       ├── label_encoder.pkl
+│       ├── biomarker_importance.csv
+│       └── model_comparison.csv
+│
+├── scripts/
+│   └── r_scripts/
+│       ├── deseq2_analysis.R
+│       ├── preprocessing.R
+│       └── enrichment_analysis.R
+│
+├── LICENSE
+├── Manual.pdf
+├── README.md
 ├── requirements.txt
+├── requirements_R.txt
 └── .gitignore
 ```
 
