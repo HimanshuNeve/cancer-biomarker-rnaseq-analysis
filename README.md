@@ -40,9 +40,7 @@ Starting from raw count data, the pipeline goes through:
 
 ---
 
-## Folder structure
-
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 cancer-biomarker-rnaseq-analysis/
