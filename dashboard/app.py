@@ -10,6 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import joblib
 import os
+import shap
 
 # ============================================================
 # Page Configuration
@@ -74,7 +75,7 @@ st.divider()
 tab1, tab2, tab3, tab4 = st.tabs([
     '🔬 Prediction',
     '📊 Biomarker Importance',
-    '🧠 Explainable AI',
+    '🧠 Global SHAP Analysis',
     'ℹ️ Project Info'
 ])
 
@@ -189,7 +190,65 @@ with tab1:
             st.subheader('Prediction Results')
 
             st.dataframe(results)
+            
+            # =================================================
+            # Dynamic SHAP Explanation
+            # =================================================
 
+            (st.subheader("🧬 Sample-Specific SHAP Explanation"))
+
+            try:
+
+                explainer = shap.TreeExplainer(
+                    rf_model
+                )
+
+                shap_values = explainer.shap_values(
+                    X_scaled
+                )
+
+                selected_sample = st.selectbox(
+                    "Select sample for SHAP explanation",
+                    input_df.index
+                )
+
+                sample_index = list(
+                    input_df.index
+                ).index(selected_sample)
+
+                st.markdown(
+                    '''
+                    SHAP explains how individual genes
+                    contributed toward the prediction.
+                    '''
+                )
+
+                shap_exp = shap.Explanation(
+                    values=shap_values[:, :, 1][sample_index],
+                    base_values=explainer.expected_value[1],
+                    data=X.iloc[sample_index],
+                    feature_names=feature_genes
+                )
+
+                fig_shap = plt.figure(
+                    figsize=(10, 6)
+                )
+
+                shap.plots.waterfall(
+                    shap_exp,
+                    max_display=15,
+                    show=False
+                )
+
+                st.pyplot(fig_shap)
+
+            except Exception as e:
+
+                st.warning(
+                    f'SHAP explanation could not '
+                    f'be generated: {e}'
+                )
+                
             # =================================================
             # Download Button
             # =================================================
