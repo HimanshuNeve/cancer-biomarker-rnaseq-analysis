@@ -33,7 +33,7 @@ Starting from raw count data, the pipeline goes through:
 
 ### Prediction Dashboard
 
-![Prediction Dashboard](plots/screenshots/prediction_dashboard.png)
+![Prediction Dashboard](plots/screenshots/prediction_dashboard.jpeg)
 
 ## Dataset
 
