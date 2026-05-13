@@ -67,10 +67,14 @@ cancer-biomarker-rnaseq-analysis/
 │   │   ├── confusion_matrices.png
 │   │   └── feature_importance.png
 │   │
+│   ├── screenshots/
+│   │   ├── prediction_dashboard.jpeg
+│   │  
+│   │
 │   ├── shap/
 │   │   ├── shap_summary.png
 │   │   ├── shap_bar.png
-│   │
+│   │   └── shap_force_plot.html
 │   │
 │   └── workflow/
 │       ├── workflow_overview.png
