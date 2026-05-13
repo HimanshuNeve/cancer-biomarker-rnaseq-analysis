@@ -42,6 +42,8 @@ Starting from raw count data, the pipeline goes through:
 
 ## Folder structure
 
+## 📂 Repository Structure
+
 ```
 cancer-biomarker-rnaseq-analysis/
 │
@@ -50,10 +52,10 @@ cancer-biomarker-rnaseq-analysis/
 │       └── sample_metadata.csv
 │
 ├── dashboard/
-│   └── app.py                         # Streamlit deployment dashboard
+│   └── app.py
 │
 ├── notebooks/
-│   └── Section11_ML_Pipeline.ipynb   # Complete ML workflow notebook
+│   └── Section11_ML_Pipeline.ipynb
 │
 ├── plots/
 │   ├── ml_plots/
@@ -76,9 +78,13 @@ cancer-biomarker-rnaseq-analysis/
 │
 ├── scripts/
 │   └── r_scripts/
-│       ├── deseq2_analysis.R
-│       ├── preprocessing.R
-│       └── enrichment_analysis.R
+│       ├── 01_download.R
+│       ├── 01b_load_data.R
+│       ├── 02_preprocess.R
+│       ├── 03_deseq2.R
+│       ├── 04_visualization.R
+│       ├── 05_enrichment.R
+│       └── export.R
 │
 ├── LICENSE
 ├── Manual.pdf
