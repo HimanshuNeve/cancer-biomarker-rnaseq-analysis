@@ -5,7 +5,16 @@ This is our postgraduate bioinformatics project where we built a pipeline to ide
 We used the TCGA breast cancer dataset (GSE62944) from NCBI GEO. It has RNA-Seq count data from real patient samples which made the results feel meaningful rather than just an academic exercise.
 
 ---
+## Live Web Application
 
+🔗 Streamlit Dashboard:
+https://cancer-biomarker-rnaseq.streamlit.app
+
+This interactive dashboard enables:
+- Breast cancer prediction from RNA-Seq expression profiles
+- Biomarker importance visualization
+- Machine learning–based tumor classification
+- Exploration of top cancer-associated genes
 ## What this project does
 
 Starting from raw count data, the pipeline goes through:
