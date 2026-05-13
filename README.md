@@ -1,6 +1,6 @@
 # Cancer Biomarker Discovery using RNA-Seq and Machine Learning
 
-This is our postgraduate bioinformatics project where we built a pipeline to identify potential cancer biomarkers from publicly available RNA-Seq data. The idea was simple — take real breast cancer gene expression data, find which genes behave differently in tumors vs normal tissue, and then see if a machine learning model can use those genes to predict cancer.
+This is our short bioinformatics project where we built a pipeline to identify potential cancer biomarkers from publicly available RNA-Seq data. The idea was simple — take real breast cancer gene expression data, find which genes behave differently in tumors vs normal tissue, and then see if a machine learning model can use those genes to predict cancer.
 
 We used the TCGA breast cancer dataset (GSE62944) from NCBI GEO. It has RNA-Seq count data from real patient samples which made the results feel meaningful rather than just an academic exercise.
 
