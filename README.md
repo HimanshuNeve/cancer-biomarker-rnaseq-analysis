@@ -42,7 +42,7 @@ Starting from raw count data, the pipeline goes through:
 
 ## Repository Structure
 
-```
+```text
 cancer-biomarker-rnaseq-analysis/
 │
 ├── data/
@@ -61,6 +61,11 @@ cancer-biomarker-rnaseq-analysis/
 │   │   ├── confusion_matrices.png
 │   │   └── feature_importance.png
 │   │
+│   ├── shap/
+│   │   ├── shap_summary.png
+│   │   ├── shap_bar.png
+│   │   └── shap_force_plot.html
+│   │
 │   └── workflow/
 │       ├── workflow_overview.png
 │       └── pipeline_architecture.png
@@ -75,6 +80,9 @@ cancer-biomarker-rnaseq-analysis/
 │       └── model_comparison.csv
 │
 ├── scripts/
+│   ├── python_scripts/
+│   │   └── shap_analysis.py
+│   │
 │   └── r_scripts/
 │       ├── 01_download.R
 │       ├── 01b_load_data.R
