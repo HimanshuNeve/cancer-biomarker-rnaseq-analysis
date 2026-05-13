@@ -192,7 +192,6 @@ gene-level contributions toward breast cancer classification.
 |---|---|
 | `shap_summary.png` | Displays overall impact of genes on model predictions |
 | `shap_bar.png` | Ranks genes by global contribution importance |
-| `shap_force_plot.html` | Explains prediction contribution for individual samples |
 
 ### Biological Relevance
 
