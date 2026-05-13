@@ -173,6 +173,39 @@ The top biomarker genes identified by feature importance included well-known can
 
 ---
 
+## 🧠 Explainable AI (SHAP)
+
+This project integrates SHAP (SHapley Additive Explanations)
+to interpret machine learning predictions and identify
+gene-level contributions toward breast cancer classification.
+
+### SHAP Features
+- Global biomarker contribution analysis
+- Interpretable Random Forest predictions
+- Gene importance visualization
+- Sample-level prediction explanation
+- Explainable AI integration for translational bioinformatics
+
+### Generated SHAP Outputs
+
+| Plot | Description |
+|---|---|
+| `shap_summary.png` | Displays overall impact of genes on model predictions |
+| `shap_bar.png` | Ranks genes by global contribution importance |
+| `shap_force_plot.html` | Explains prediction contribution for individual samples |
+
+### Biological Relevance
+
+SHAP enables identification of:
+- tumor-driving biomarkers
+- protective gene signatures
+- feature contribution patterns
+- interpretable cancer prediction mechanisms
+
+This improves the transparency and biological interpretability
+of the RNA-Seq machine learning pipeline.
+
+
 ## Reproducibility
 
 We made an effort to keep this reproducible:
