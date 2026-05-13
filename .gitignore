@@ -29,9 +29,6 @@ results/enrichment/*.csv
 Thumbs.db
 *.log
 
-# ── Model binaries (optional — commit if small) ──
-# results/ml_models/*.pkl
-
 # ── Sensitive files ──────────────────
 .env
 *.key
