@@ -180,11 +180,18 @@ to interpret machine learning predictions and identify
 gene-level contributions toward breast cancer classification.
 
 ### SHAP Features
+
+#### Global Explainability
 - Global biomarker contribution analysis
 - Interpretable Random Forest predictions
 - Gene importance visualization
-- Sample-level prediction explanation
-- Explainable AI integration for translational bioinformatics
+- Global feature contribution ranking
+
+#### Dynamic Sample-Level Explainability
+- Real-time SHAP interpretation for uploaded samples
+- Interactive sample selection
+- Dynamic waterfall-based prediction explanation
+- Personalized gene contribution visualization
 
 ### Generated SHAP Outputs
 
@@ -192,6 +199,7 @@ gene-level contributions toward breast cancer classification.
 |---|---|
 | `shap_summary.png` | Displays overall impact of genes on model predictions |
 | `shap_bar.png` | Ranks genes by global contribution importance |
+| Dynamic Waterfall Plot | Explains prediction contribution for uploaded samples |
 
 ### Biological Relevance
 
@@ -203,7 +211,6 @@ SHAP enables identification of:
 
 This improves the transparency and biological interpretability
 of the RNA-Seq machine learning pipeline.
-
 
 ## Reproducibility
 
