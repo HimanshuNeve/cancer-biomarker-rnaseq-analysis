@@ -1,4 +1,5 @@
 # Cancer Biomarker Discovery using RNA-Seq and Machine Learning
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://cancer-biomarker-rnaseq.streamlit.app)
 
 This is our short bioinformatics project where we built a pipeline to identify potential cancer biomarkers from publicly available RNA-Seq data. The idea was simple — take real breast cancer gene expression data, find which genes behave differently in tumors vs normal tissue, and then see if a machine learning model can use those genes to predict cancer.
 
@@ -28,12 +29,17 @@ Starting from raw count data, the pipeline goes through:
 - A small Streamlit web app where you can upload expression data and get a prediction
 
 ---
+## 📸 Dashboard Preview
+
+### Prediction Dashboard
+
+![Prediction Dashboard](plots/screenshots/prediction_dashboard.png)
 
 ## Dataset
 
 **GEO Accession:** GSE62944  
 **Cancer type:** Breast Invasive Carcinoma (BRCA)  
-**Samples used:** 50 tumor + 20 normal  
+**Samples used:** 200 tumor + 100 normal 
 **Source:** TCGA via NCBI GEO  
 **Paper:** Rahman et al., Scientific Data, 2015  
 **Link:** https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE62944
@@ -231,14 +237,21 @@ We made an effort to keep this reproducible:
 
 ---
 
-## Team
+## 👨‍💻 Contributors
 
-This was a 2-person project. We split the work by domain:
+### Himanshu Neve
+- Lead developer and primary bioinformatics researcher
+- RNA-Seq preprocessing and DESeq2 analysis
+- Machine learning model development
+- SHAP explainable AI integration
+- Streamlit dashboard deployment
+- GitHub workflow and project architecture
 
-- **Person 1** handled the bioinformatics side — data download, DESeq2, enrichment analysis
-- **Person 2** handled the ML side — feature engineering, model training, dashboard
-
----
+### Sara
+- Dashboard testing and workflow validation
+- UI refinement and usability improvements
+- Visualization review and project coordination
+- Assistance in deployment and debugging
 
 ## Tools used
 
