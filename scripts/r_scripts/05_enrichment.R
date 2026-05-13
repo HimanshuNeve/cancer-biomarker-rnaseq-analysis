@@ -57,7 +57,11 @@ dev.off()
 # =============================================================
 ekegg <- enrichKEGG(
   gene = gene_entrez$ENTREZID,
-  organism = 'hsa', # hsa = Homo sapiens
+  organism = 'hsa', # hsa = Homovst_matrix <- assay(readRDS('data/processed/vst_BRCA.rds'))
+  write.csv(vst_matrix, 'data/processed/vst_matrix_BRCA.csv')
+  cat('VST matrix exported!\n')
+  cat('Rows (genes):', nrow(vst_matrix), '\n')
+  cat('Columns (samples):', ncol(vst_matrix), '\n') sapiens
   pvalueCutoff = 0.05,
   pAdjustMethod = 'BH'
 )
