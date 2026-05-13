@@ -1,0 +1,9 @@
+DESeq2
+data.table
+dplyr
+ggplot2
+pheatmap
+clusterProfiler
+org.Hs.eg.db
+EnhancedVolcano
+readr

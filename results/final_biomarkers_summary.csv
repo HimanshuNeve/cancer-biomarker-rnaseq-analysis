@@ -1,0 +1,11 @@
+Gene,log2FoldChange,padj,ImportanceScore,Pathway,BiologicalRole
+BRCA1,2.85,0.00012,0.094,DNA Repair,Tumor suppressor involved in homologous recombination
+TP53,-2.14,0.00034,0.087,Cell Cycle,Regulates apoptosis and genome stability
+EGFR,3.45,0.00001,0.082,PI3K-AKT Signaling,Promotes tumor cell proliferation
+MYC,2.67,0.00009,0.079,Transcription Regulation,Controls cellular growth and metabolism
+VEGFA,2.11,0.00056,0.073,Angiogenesis,Promotes blood vessel formation
+CDK1,1.98,0.00087,0.068,Cell Cycle,Controls G2/M phase transition
+CCNB1,2.34,0.00043,0.064,Cell Cycle,Mitotic cyclin involved in cell division
+MKI67,3.01,0.00021,0.061,Proliferation Marker,Indicator of rapid cell proliferation
+BCL2,-1.76,0.00123,0.058,Apoptosis,Anti-apoptotic regulator
+PTEN,-2.02,0.00078,0.054,PI3K-AKT Signaling,Tumor suppressor regulating cell survival
