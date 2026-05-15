@@ -73,10 +73,10 @@ st.divider()
 # ============================================================
 
 tab1, tab2, tab3, tab4 = st.tabs([
-    '🔬 Prediction',
-    '📊 Biomarker Importance',
-    '🧠 Global SHAP Analysis',
-    'ℹ️ Project Info'
+    'Prediction',
+    'Biomarker Importance',
+    'Global SHAP Analysis',
+    'Project Info'
 ])
 
 # ============================================================
